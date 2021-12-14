@@ -34,6 +34,16 @@ module.exports = {
         options: {
           name: '/assets/[name].[ext]'
         }
+      },
+      /* FONTS */
+      {
+        test: /\.(woff(2)?|ttf|eot|otf)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 8192,
+          mimetype: 'application/font-ttf',
+          name: '/assets/fonts/[name].[ext]'
+        }
       }
     ]
   }
