@@ -56,7 +56,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: `Generated in ${Date.now()}`,
+      title: `Webpack Setup`,
       template: './src/public/index.html',
       filename: 'index.html'
     })
