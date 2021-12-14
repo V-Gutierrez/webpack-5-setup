@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 /*
 
@@ -44,7 +45,20 @@ module.exports = {
           mimetype: 'application/font-ttf',
           name: '/assets/fonts/[name].[ext]'
         }
+      },
+      /* Javascript */
+      {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: `Generated in ${Date.now()}`,
+      template: './src/public/index.html',
+      filename: 'index.html'
+    })
+  ]
 }
