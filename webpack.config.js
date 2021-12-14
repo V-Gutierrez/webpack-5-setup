@@ -1,5 +1,15 @@
 const path = require('path')
 
+/*
+
+sass-loader – for SCSS and CSS compile
+node-sass – for node sass
+postcss-loader - Process CSS with PostCSS
+css-loader – resolve CSS imports
+style-loader – inject CSS into the Dom
+
+*/
+
 module.exports = {
   mode: 'production',
   entry: {
