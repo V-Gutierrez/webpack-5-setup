@@ -13,7 +13,7 @@ style-loader – inject CSS into the Dom
 module.exports = {
   mode: 'production',
   entry: {
-    main: path.resolve(__dirname, './src/index.js')
+    main: path.resolve(__dirname, './src/app/index.js')
   },
 
   output: {
@@ -22,9 +22,18 @@ module.exports = {
   },
   module: {
     rules: [
+      /* CSS SCSS */
       {
         test: /\.(scss|css)$/i,
         use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader']
+      },
+      /* IMAGES */
+      {
+        test: /\.(?:ico|gif|png|jpe?g|svg)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '/assets/[name].[ext]'
+        }
       }
     ]
   }
