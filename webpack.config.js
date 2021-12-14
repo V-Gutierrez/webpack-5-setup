@@ -57,6 +57,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: `Webpack Setup`,
+      timestamp: new Date().getTime(),
       template: './src/public/index.html',
       filename: 'index.html'
     })

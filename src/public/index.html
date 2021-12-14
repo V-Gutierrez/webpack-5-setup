@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700'"
+    />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <main>
       <h1>Webpack Setup</h1>
       <article>
-        <h4 class="article__title">
-          This was a project to learn more about Webpack 5
-        </h4>
+        <h5 class="article__title">
+          This is a project to learn more about Webpack 5
+        </h5>
       </article>
+      <progress class="progress" value="0" max="100"></progress>
+      <p>Generated at <%= htmlWebpackPlugin.options.timestamp %></p>
     </main>
 
     <script src="../app/index.js"></script>
